@@ -2,6 +2,7 @@ package com.example.myapp.model.http;
 
 import com.example.myapp.apps.Constant;
 import com.example.myapp.model.apis.MyApi;
+import com.example.myapp.model.apis.ZhuanLanApi;
 import com.example.myapp.utils.SystemUtils;
 
 import java.io.File;
@@ -23,7 +24,7 @@ public class HttpManager {
     private static Cache cache;
 
     private static MyApi myApi;
-
+   private static ZhuanLanApi zhuanLanApi;
     //创建Retrofit对象
     private static Retrofit getRetrofit(String url){
         Retrofit retrofit = new Retrofit.Builder()
@@ -76,6 +77,17 @@ public class HttpManager {
         return myApi;
     }
 
+//专栏。
+    public static ZhuanLanApi getZhuanLanApi(){
+        synchronized (HttpManager.class){
+            if(zhuanLanApi == null){
+                synchronized (HttpManager.class){
+                    zhuanLanApi = getServerApis(Constant.ZhuanLan_URl,ZhuanLanApi.class);
+                }
+            }
+        }
+        return zhuanLanApi;
+    }
     //拦截器的实现类
     private static class Myintercepter implements Interceptor {
 

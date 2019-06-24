@@ -10,9 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapp.R;
+import com.example.myapp.base.BaseFragment;
+import com.example.myapp.interfaces.IPersenter;
 
 
-public class Fragment_ZhuanTi extends Fragment {
+public class Fragment_ZhuanTi extends BaseFragment {
 
 
     public Fragment_ZhuanTi() {
@@ -21,9 +23,22 @@ public class Fragment_ZhuanTi extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment__zhuan_ti, container, false);
+    protected int getLayoutId() {
+        return R.layout.fragment_fragment__zhuan_ti;
+    }
+
+    @Override
+    protected void initView(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected IPersenter createPersenter() {
+        return null;
     }
 }
