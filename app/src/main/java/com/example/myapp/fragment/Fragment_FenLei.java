@@ -10,20 +10,29 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapp.R;
+import com.example.myapp.base.BaseFragment;
+import com.example.myapp.interfaces.IPersenter;
 
-public class Fragment_FenLei extends Fragment {
-
-
-    public Fragment_FenLei() {
-        // Required empty public constructor
-    }
+public class Fragment_FenLei extends BaseFragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment__fen_lei, container, false);
+    protected int getLayoutId() {
+        return R.layout.fragment_fragment__fen_lei;
     }
 
+    @Override
+    protected void initView(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected IPersenter createPersenter() {
+        return null;
+    }
 }
