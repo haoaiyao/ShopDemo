@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.Fragment_FenLei">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/RLsousuo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="分类" />
+        android:layout_height="@dimen/x50"
+        android:layout_margin="@dimen/x30"
+        android:background="@drawable/sousuoback">
+        <ImageView
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50"
+            android:layout_toLeftOf="@id/SOusuo_tv1"
+            android:src="@mipmap/ic_action_action_search"
+            android:scaleType="centerCrop"
+            />
+        <EditText
+            android:layout_width="@dimen/x300"
+            android:layout_height="wrap_content"
+            android:id="@+id/SOusuo_ed1"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/SOusuo_tv1"
+            android:layout_width="@dimen/x300"
+            android:text="商品搜索，共239款好物"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
-</FrameLayout>
+</>
