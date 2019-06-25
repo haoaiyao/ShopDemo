@@ -8,8 +8,8 @@ public class Constant {
     public static final String ZhuanLan_URl = "http://cdwan.cn:8360/api/";
 
     //网络缓存的地址
-    public static final String PATH_DATA = MyApplication.app.getCacheDir().getAbsolutePath() + File.separator + "data";
+    public static final String PATH_DATA = MyApplication.app.getCacheDir().getAbsolutePath() + File.separator + "ShiXun";
 
-    public static final String PATH_CACHE = PATH_DATA + "/ShiXun";
+    public static final String PATH_CACHE = PATH_DATA + "/shixun1";
 
 }

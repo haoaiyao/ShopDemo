@@ -37,11 +37,10 @@ public class Adapter_ZhuanLan extends RecyclerView.Adapter<Adapter_ZhuanLan.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SpecialBean.DataBeanX.DataBean dataBean = data.get(position);
-        ViewHolder holder1=(ViewHolder) holder;
-        holder1.tv1.setText(dataBean.getTitle());
-        holder1.tv2.setText(dataBean.getSubtitle());
-        holder1.tv3.setText(dataBean.getPrice_info()+"元起");
-        Glide.with(context).load(dataBean.getScene_pic_url()).into(holder1.im1);
+        ((ViewHolder)holder).tv1.setText(dataBean.getTitle());
+        ((ViewHolder)holder).tv2.setText(dataBean.getSubtitle());
+        ((ViewHolder)holder).tv3.setText(dataBean.getPrice_info()+"元起");
+        Glide.with(context).load(dataBean.getScene_pic_url()).into(((ViewHolder)holder).im1);
     }
 
     @Override

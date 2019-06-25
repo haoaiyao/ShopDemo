@@ -4,6 +4,7 @@ package com.example.myapp.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,12 +58,13 @@ public class Fragment_ZhuanTi extends BaseFragment implements ZhuanLanContract.V
     }
 
     @Override
-    protected IPersenter createPersenter() {
+    protected ZhuanLanPresenter createPersenter() {
         return new ZhuanLanPresenter();
     }
 
     @Override
     public void getspecial(SpecialBean special) {
+        Log.e("sp:",special.getErrmsg());
         List<SpecialBean.DataBeanX.DataBean> data = special.getData().getData();
         dataBeans.addAll(data);
         adapter_zhuanLan.notifyDataSetChanged();
