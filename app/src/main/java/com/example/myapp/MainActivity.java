@@ -25,7 +25,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 public class MainActivity extends BaseActivity {
 
 
