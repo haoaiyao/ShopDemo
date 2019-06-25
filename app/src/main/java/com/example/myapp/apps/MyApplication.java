@@ -3,6 +3,7 @@ package com.example.myapp.apps;
 import android.app.Application;
 
 import com.example.myapp.utils.DensityUtils;
+import com.umeng.commonsdk.UMConfigure;
 
 public class MyApplication extends Application {
 
@@ -14,5 +15,6 @@ public class MyApplication extends Application {
         app = this;
         //初始化Density
         //DensityUtils.setDensity(this);
+
     }
 }

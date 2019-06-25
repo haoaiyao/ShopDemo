@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
 <ImageView
     android:layout_width="match_parent"
-    android:layout_height="@dimen/y500"
-    android:scaleType="centerCrop"
+    android:layout_height="@dimen/y520"
+    android:scaleType="center"
     android:src="@mipmap/ic_launcher"
     android:id="@+id/im_special"/>
     <TextView
