@@ -25,7 +25,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 //呼雅琴
 public class MainActivity extends BaseActivity {
 
@@ -36,8 +35,6 @@ public class MainActivity extends BaseActivity {
     FrameLayout context;
     private ArrayList<Fragment> fragments;
     private FragmentManager manager;
-    private Toolbar toolbar;
-    private ArrayList<String> titles;
 
     @Override
     protected int getLayout() {
@@ -67,9 +64,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        titles = new ArrayList<>();
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("");
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -92,12 +87,6 @@ public class MainActivity extends BaseActivity {
         tab.addTab(tab.newTab().setText("分类").setIcon(R.drawable.fenlei_select));
         tab.addTab(tab.newTab().setText("购物车").setIcon(R.drawable.shopping_select));
         tab.addTab(tab.newTab().setText("我的").setIcon(R.drawable.my_select));
-
-        titles.add("首页");
-        titles.add("专题");
-        titles.add("分类");
-        titles.add("购物车");
-        titles.add("我的");
 
         tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -123,7 +112,6 @@ public class MainActivity extends BaseActivity {
         }
         transaction.show(fragments.get(0));
         transaction.commit();
-        toolbar.setTitle("首页");
         tab.getTabAt(0).select();
     }
 
@@ -141,7 +129,6 @@ public class MainActivity extends BaseActivity {
         transaction.hide(lastFragment);
 
         transaction.show(fragment);
-        toolbar.setTitle(titles.get(position));
         transaction.commit();
 
         lastPosition = position;
