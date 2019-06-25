@@ -26,9 +26,9 @@
         <TextView
             android:id="@+id/SOusuo_tv1"
             android:layout_width="@dimen/x300"
-            android:text="商品搜索，共239款好物"
+            android:text="@string/sosuotitle"
             android:layout_centerInParent="true"
             android:layout_height="wrap_content" />
     </RelativeLayout>
 
-</>
+</RelativeLayout>
