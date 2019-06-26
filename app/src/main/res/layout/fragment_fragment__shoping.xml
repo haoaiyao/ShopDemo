@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragment.Fragment_Shoping">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80"
+        android:orientation="horizontal"
+        android:background="@color/colorhui1">
+
+        <ImageView
+            android:layout_width="@dimen/x10"
+            android:layout_height="@dimen/x10"
+            android:background="@drawable/huselect"
+            android:layout_marginTop="@dimen/x35"
+            android:layout_marginLeft="@dimen/x20" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/item_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x8"
+            android:text="30天无忧退货"
+            android:layout_weight="1"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="@dimen/x10"
+            android:layout_height="@dimen/x10"
+            android:background="@drawable/huselect"
+            android:layout_marginTop="@dimen/x35"
+            android:layout_marginLeft="@dimen/x20" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/item_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="48小时快速退款"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_weight="1"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="@dimen/x10"
+            android:layout_height="@dimen/x10"
+            android:background="@drawable/huselect"
+            android:layout_marginTop="@dimen/x35"
+            android:layout_marginLeft="@dimen/x20" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/item_txt3"
+            android:layout_marginLeft="@dimen/x8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="满88元免邮费"
+            android:layout_weight="1"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/re"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="购物车" />
+        android:layout_above="@id/kong">
 
-</FrameLayout>
+    </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/kong"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:background="@drawable/huselect1"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorhui2">
+
+        <RadioButton
+            android:id="@+id/rb_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x100"
+            android:text="全选（10）"/>
+
+        <TextView
+            android:id="@+id/rb_btn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="       ¥  3333"/>
+
+
+        <TextView
+            android:id="@+id/bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="             编辑"
+            android:layout_marginRight="@dimen/x20"/>
+
+        <TextView
+            android:layout_width="@dimen/x200"
+            android:layout_height="match_parent"
+            android:background="@drawable/huselect2"
+            android:text="下单"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/colorwhite"/>
+    </LinearLayout>
+
+
+</LinearLayout>
