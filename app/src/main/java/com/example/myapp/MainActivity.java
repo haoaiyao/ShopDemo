@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
+//呼雅琴
 public class MainActivity extends BaseActivity {
 
 
@@ -65,6 +65,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
