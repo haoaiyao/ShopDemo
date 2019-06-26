@@ -3,17 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.Fragment_FenLei">
     <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:id="@+id/RLsousuo"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x50"
         android:layout_margin="@dimen/x30"
-        android:background="@drawable/sousuoback">
+        android:background="@drawable/sousuoback"
+        android:layout_toLeftOf="@id/SOusuo_quxiao">
         <ImageView
+            android:id="@+id/SOusuo_image"
             android:layout_width="@dimen/x50"
             android:layout_height="@dimen/x50"
-            android:layout_toLeftOf="@id/SOusuo_tv1"
+            android:layout_toLeftOf="@id/SOusuo_ed1"
             android:src="@mipmap/ic_action_action_search"
             android:scaleType="centerCrop"
             />
@@ -21,14 +26,72 @@
             android:layout_width="@dimen/x300"
             android:layout_height="wrap_content"
             android:id="@+id/SOusuo_ed1"
+            android:textSize="12dp"
             android:layout_centerInParent="true"
-            android:visibility="gone"/>
-        <TextView
+            android:hint="@string/sosuotitle"
+            android:background="@null"/>
+       <!-- <TextView
             android:id="@+id/SOusuo_tv1"
             android:layout_width="@dimen/x300"
             android:text="@string/sosuotitle"
             android:layout_centerInParent="true"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content" />-->
     </RelativeLayout>
+    <TextView
+        android:id="@+id/SOusuo_quxiao"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x50"
+        android:layout_alignParentRight="true"
+        android:text="确定"
+        android:layout_marginTop="@dimen/x30"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/x30" />
+    <q.rorbin.verticaltablayout.VerticalTabLayout
+        app:tab_margin="@dimen/x40"
+        app:tab_mode="scrollable"
+        android:layout_width="@dimen/x150"
+        android:layout_height="match_parent"
+        android:layout_below="@id/RLsousuo"
+        android:layout_marginTop="@dimen/x20"
+        android:id="@+id/SOusuo_Tab"></q.rorbin.verticaltablayout.VerticalTabLayout>
+   <RelativeLayout
+       android:id="@+id/RLsousuo2"
+       android:layout_width="@dimen/x460"
+       android:layout_height="@dimen/x200"
+       android:layout_below="@id/RLsousuo"
+      android:layout_alignParentRight="true"
+       android:layout_marginTop="@dimen/x20"
+       android:layout_marginRight="@dimen/x30">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/SOusuo_image2"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/SOusuo_tv1"
+           android:gravity="center"
+           android:text="223"
+           android:textColor="#ffffff"/>
+   </RelativeLayout>
+    <TextView
+        android:id="@+id/SOusuo_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RLsousuo2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x185"
+        android:text="—居家分类—"
+        android:layout_marginTop="@dimen/x30"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/MyRcy"
+        android:layout_width="@dimen/x460"
+        android:layout_height="match_parent"
+        android:layout_below="@id/SOusuo_tv2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginBottom="@dimen/x60"></android.support.v7.widget.RecyclerView>
 </RelativeLayout>
