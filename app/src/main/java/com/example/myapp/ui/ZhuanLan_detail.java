@@ -15,6 +15,7 @@ import com.example.myapp.base.BaseActivity;
 import com.example.myapp.interfaces.IPersenter;
 import com.example.myapp.interfaces.zhuanlan.ZhuanLan_Detail;
 import com.example.myapp.model.bean.ZhuanLan_detailBean;
+import com.example.myapp.persenter.zhuanlanpresenter.XiangDetailPresenter;
 import com.example.myapp.persenter.zhuanlanpresenter.XiangGuanPresenter;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
@@ -54,7 +55,7 @@ public class ZhuanLan_detail extends BaseActivity implements ZhuanLan_Detail.Vie
     @Override
     protected void initView() {
         Intent intent = getIntent();
-        id = intent.getIntExtra("iid",0);
+        id = intent.getIntExtra("id",0);
         egDetail.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -73,12 +74,12 @@ public class ZhuanLan_detail extends BaseActivity implements ZhuanLan_Detail.Vie
 
     @Override
     protected void initData() {
-        ((XiangGuanPresenter) persenter).getXiangGuanP(id+"");
+        ((XiangDetailPresenter) persenter).getDetail(id+"");
     }
 
     @Override
     protected IPersenter createPersenter() {
-        return new XiangGuanPresenter();
+        return new XiangDetailPresenter();
     }
 
     @Override

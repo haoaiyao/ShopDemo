@@ -7,13 +7,13 @@
     tools:context="com.example.myapp.ui.ZhuanLan_detail">
 <com.youth.banner.Banner
     android:layout_width="match_parent"
-    android:layout_height="@dimen/y600"
+    android:layout_height="@dimen/y750"
     android:id="@+id/detail_ban"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/detail_ban"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:textColor="#000000"
         android:gravity="center"
         android:text="5555555555555555"
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_detail"
         android:gravity="center"
+        android:layout_marginTop="10dp"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tv3_detail"
@@ -39,7 +40,8 @@
         />
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y70"
+        android:layout_height="@dimen/y80"
+
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:id="@+id/eg_detail">

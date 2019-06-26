@@ -45,7 +45,7 @@ public class Adapter_ZhuanLanXG extends RecyclerView.Adapter<Adapter_ZhuanLanXG.
             public void onClick(View v) {
                 int id = dataBean.getId();
                 Intent intent = new Intent(context, ZhuanLan_detail.class);
-                intent.putExtra("iid",id);
+                intent.putExtra("id",id);
                 context.startActivity(intent);
             }
         });
