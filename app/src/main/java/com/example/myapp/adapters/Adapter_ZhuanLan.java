@@ -1,6 +1,7 @@
 package com.example.myapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,9 +14,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.myapp.R;
 import com.example.myapp.model.bean.SpecialBean;
+import com.example.myapp.ui.ZhuanLanActivity;
 
 
 import java.util.List;
+
+import butterknife.OnClick;
 
 public class Adapter_ZhuanLan extends RecyclerView.Adapter<Adapter_ZhuanLan.ViewHolder> {
     private List<SpecialBean.DataBeanX.DataBean> data;
@@ -35,12 +39,21 @@ public class Adapter_ZhuanLan extends RecyclerView.Adapter<Adapter_ZhuanLan.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        SpecialBean.DataBeanX.DataBean dataBean = data.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        final SpecialBean.DataBeanX.DataBean dataBean = data.get(position);
         ((ViewHolder)holder).tv1.setText(dataBean.getTitle());
         ((ViewHolder)holder).tv2.setText(dataBean.getSubtitle());
         ((ViewHolder)holder).tv3.setText(dataBean.getPrice_info()+"元起");
         Glide.with(context).load(dataBean.getScene_pic_url()).into(((ViewHolder)holder).im1);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = dataBean.getId();
+                Intent intent = new Intent(context, ZhuanLanActivity.class);
+                intent.putExtra("id",id);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -62,4 +75,5 @@ public class Adapter_ZhuanLan extends RecyclerView.Adapter<Adapter_ZhuanLan.View
             tv3 = itemView.findViewById(R.id.tv3_special);
         }
     }
+
 }
