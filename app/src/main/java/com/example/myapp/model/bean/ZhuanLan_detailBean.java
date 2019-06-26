@@ -67,7 +67,7 @@ public class ZhuanLan_detailBean {
         private String item_pic_url;
         private String subtitle;
         private int topic_category_id;
-        private int price_info;
+        private String price_info;
         private String read_count;
         private String scene_pic_url;
         private int topic_template_id;
@@ -131,11 +131,11 @@ public class ZhuanLan_detailBean {
             this.topic_category_id = topic_category_id;
         }
 
-        public int getPrice_info() {
+        public String getPrice_info() {
             return price_info;
         }
 
-        public void setPrice_info(int price_info) {
+        public void setPrice_info(String price_info) {
             this.price_info = price_info;
         }
 

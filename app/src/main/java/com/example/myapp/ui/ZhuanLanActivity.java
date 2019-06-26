@@ -39,7 +39,7 @@ public class ZhuanLanActivity extends BaseActivity implements XiangGuan.View {
     @Override
     protected void initView() {
         Intent intent = getIntent();
-        id = intent.getStringExtra("id");
+        id = intent.getStringExtra("iid");
         dataBeans = new ArrayList<>();
         rvLianbiao.setLayoutManager(new GridLayoutManager(context,2));
         adapter_zhuanLanXG = new Adapter_ZhuanLanXG(dataBeans, context);
