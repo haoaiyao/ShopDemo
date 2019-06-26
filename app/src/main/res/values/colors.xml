@@ -11,6 +11,14 @@
     <color name="colorred2">#B52329</color>
     <color name="colorwhite">#F3EDED</color>
     <color name="colorhui2">#F2EEEE </color>
+    <!--<color name="colorxianhui">#E5E4E4</color>
+    <color name="colorred">#F00C0C</color>
+    <color name="colorhui1">#E1DEDE</color>
+    <color name="colorred1">#F45F5F</color>
+    <color name="colorred2">#B52329</color>
+    <color name="colorwhite">#F3EDED</color>
+    <color name="colorhui2">#F2EEEE </color>-->
+    <!--<color name="brack">#000000</color>
     <color name="colorxianhui">#E5E4E4</color>
     <color name="colorred">#F00C0C</color>
     <color name="colorhui1">#E1DEDE</color>
@@ -18,12 +26,5 @@
     <color name="colorred2">#B52329</color>
     <color name="colorwhite">#F3EDED</color>
     <color name="colorhui2">#F2EEEE </color>
-    <color name="brack">#000000</color>
-    <color name="colorxianhui">#E5E4E4</color>
-    <color name="colorred">#F00C0C</color>
-    <color name="colorhui1">#E1DEDE</color>
-    <color name="colorred1">#F45F5F</color>
-    <color name="colorred2">#B52329</color>
-    <color name="colorwhite">#F3EDED</color>
-    <color name="colorhui2">#F2EEEE </color>
+    <color name="colorhui2">#F2EEEE </color>-->
 </resources>
