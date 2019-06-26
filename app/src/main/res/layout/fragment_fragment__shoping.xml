@@ -88,7 +88,7 @@
         android:orientation="horizontal"
         android:background="@color/colorhui2">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/rb_btn"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/x100"
