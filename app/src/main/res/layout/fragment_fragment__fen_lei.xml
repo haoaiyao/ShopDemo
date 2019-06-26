@@ -6,12 +6,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.Fragment_FenLei">
     <RelativeLayout
+<<<<<<< HEAD
         android:focusable="true"
         android:focusableInTouchMode="true"
+=======
+>>>>>>> Zyt
         android:id="@+id/RLsousuo"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x50"
         android:layout_margin="@dimen/x30"
+<<<<<<< HEAD
         android:background="@drawable/sousuoback"
         android:layout_toLeftOf="@id/SOusuo_quxiao">
         <ImageView
@@ -19,6 +23,13 @@
             android:layout_width="@dimen/x50"
             android:layout_height="@dimen/x50"
             android:layout_toLeftOf="@id/SOusuo_ed1"
+=======
+        android:background="@drawable/sousuoback">
+        <ImageView
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50"
+            android:layout_toLeftOf="@id/SOusuo_tv1"
+>>>>>>> Zyt
             android:src="@mipmap/ic_action_action_search"
             android:scaleType="centerCrop"
             />
@@ -26,15 +37,22 @@
             android:layout_width="@dimen/x300"
             android:layout_height="wrap_content"
             android:id="@+id/SOusuo_ed1"
+<<<<<<< HEAD
             android:textSize="12dp"
             android:layout_centerInParent="true"
             android:hint="@string/sosuotitle"
             android:background="@null"/>
        <!-- <TextView
+=======
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <TextView
+>>>>>>> Zyt
             android:id="@+id/SOusuo_tv1"
             android:layout_width="@dimen/x300"
             android:text="@string/sosuotitle"
             android:layout_centerInParent="true"
+<<<<<<< HEAD
             android:layout_height="wrap_content" />-->
     </RelativeLayout>
     <TextView
@@ -94,4 +112,9 @@
         android:layout_marginRight="@dimen/x30"
         android:layout_marginTop="@dimen/x30"
         android:layout_marginBottom="@dimen/x60"></android.support.v7.widget.RecyclerView>
+=======
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+>>>>>>> Zyt
 </RelativeLayout>
