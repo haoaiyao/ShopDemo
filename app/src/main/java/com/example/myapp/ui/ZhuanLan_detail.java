@@ -44,7 +44,7 @@ public class ZhuanLan_detail extends BaseActivity implements ZhuanLan_Detail.Vie
     RadioGroup egDetail;
     @BindView(R.id.tv3_detail)
     TextView tv3Detail;
-    private String id;
+    private int id;
 
     @Override
     protected int getLayout() {
@@ -54,7 +54,7 @@ public class ZhuanLan_detail extends BaseActivity implements ZhuanLan_Detail.Vie
     @Override
     protected void initView() {
         Intent intent = getIntent();
-        id = intent.getStringExtra("idd");
+        id = intent.getIntExtra("iid",0);
         egDetail.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -73,7 +73,7 @@ public class ZhuanLan_detail extends BaseActivity implements ZhuanLan_Detail.Vie
 
     @Override
     protected void initData() {
-        ((XiangGuanPresenter) persenter).getXiangGuanP(id);
+        ((XiangGuanPresenter) persenter).getXiangGuanP(id+"");
     }
 
     @Override
@@ -84,7 +84,9 @@ public class ZhuanLan_detail extends BaseActivity implements ZhuanLan_Detail.Vie
     @Override
     public void getDetail(ZhuanLan_detailBean zhuanLan_detailBean) {
         ArrayList<String> strings = new ArrayList<>();
-        strings.add(zhuanLan_detailBean.getData().getContent());
+        strings.add(zhuanLan_detailBean.getData().getAvatar());
+        strings.add(zhuanLan_detailBean.getData().getItem_pic_url());
+        strings.add(zhuanLan_detailBean.getData().getScene_pic_url());
         detailBan.setImages(strings).setImageLoader(new ImageLoader() {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {

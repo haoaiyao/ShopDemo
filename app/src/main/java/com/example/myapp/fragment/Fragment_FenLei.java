@@ -15,7 +15,7 @@ import com.example.myapp.interfaces.IPersenter;
 
 public class Fragment_FenLei extends BaseFragment {
 
-//杨彬
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_fragment__fen_lei;

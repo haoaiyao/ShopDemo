@@ -36,13 +36,13 @@ public class Adapter_ZhuanLanXG extends RecyclerView.Adapter<Adapter_ZhuanLanXG.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHodler viewHodler, final int i) {
+        final ZhuanLan_XiangGuan.DataBean dataBean = data.get(i);
          viewHodler.tv1.setText(data.get(i).getSubtitle());
          viewHodler.tv2.setText(data.get(i).getPrice_info()+"元");
         Glide.with(context).load(data.get(i).getScene_pic_url()).into(viewHodler.im);
         viewHodler.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZhuanLan_XiangGuan.DataBean dataBean = data.get(i);
                 int id = dataBean.getId();
                 Intent intent = new Intent(context, ZhuanLan_detail.class);
                 intent.putExtra("iid",id);
