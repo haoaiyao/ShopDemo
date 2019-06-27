@@ -4,7 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.Fragment_FenLei">
 
+    <RelativeLayout
+        android:id="@+id/RLsousuo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:layout_margin="@dimen/x30"
+        android:layout_toLeftOf="@id/SOusuo_quxiao"
+        android:background="@drawable/sousuoback"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/SOusuo_image"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50"
+            android:layout_toLeftOf="@id/SOusuo_ed1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_action_action_search" />
+
+        <EditText
+            android:id="@+id/SOusuo_ed1"
+            android:layout_width="@dimen/x300"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:hint="@string/sosuotitle"
+            android:textSize="12dp" />
+        <!-- <TextView
+             android:id="@+id/SOusuo_tv1"
+             android:layout_width="@dimen/x300"
+             android:text="@string/sosuotitle"
+             android:layout_centerInParent="true"
+             android:layout_height="wrap_content" />-->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/SOusuo_quxiao"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x50"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:gravity="center"
+        android:text="确定"
+        android:visibility="gone" />
+
+    <q.rorbin.verticaltablayout.VerticalTabLayout
+        android:id="@+id/SOusuo_Tab"
+        android:layout_width="@dimen/x150"
+        android:layout_height="match_parent"
+        android:layout_below="@id/RLsousuo"
+        android:layout_marginTop="@dimen/x20"
+        app:tab_margin="@dimen/x40"
+        app:tab_mode="scrollable"></q.rorbin.verticaltablayout.VerticalTabLayout>
+
+    <RelativeLayout
+        android:id="@+id/RLsousuo2"
+        android:layout_width="@dimen/x460"
+        android:layout_height="@dimen/x200"
+        android:layout_below="@id/RLsousuo"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginRight="@dimen/x30">
+
+        <ImageView
+            android:id="@+id/SOusuo_image2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/SOusuo_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="223"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/SOusuo_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RLsousuo2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginRight="@dimen/x185"
+        android:text="—居家分类—" />
 </RelativeLayout>
