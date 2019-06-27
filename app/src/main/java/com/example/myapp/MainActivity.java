@@ -28,7 +28,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
-
     @BindView(R.id.tab)
     TabLayout tab;
     @BindView(R.id.context)
